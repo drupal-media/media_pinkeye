@@ -22,6 +22,6 @@ http://drupal.org/project/media_pinkeye
 ### Maintainers:
  - [Janez Urevc (@slashrsm)](http://drupal.org/user/744628)
 
-Get in touch:
+### Get in touch:
  - http://groups.drupal.org/media
  - IRC: #drupal-media @ Freenode
