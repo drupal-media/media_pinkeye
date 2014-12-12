@@ -1,0 +1,17 @@
+id: media.tweet.category
+entity_type: media
+bundle: tweet
+field_name: category
+field_type: taxonomy_term_reference
+label: Category
+description: 'Select category media belongs to.'
+required: true
+default_value: {  }
+default_value_callback: 'media_pinkeye_category_default_value'
+settings: {  }
+status: true
+langcode: und
+dependencies:
+  config:
+    - field.storage.media.category
+    - media_entity.bundle.tweet

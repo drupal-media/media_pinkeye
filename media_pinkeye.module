@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Hooks for Media Pinkeye module.
+ */
+
+use \Drupal\Core\Entity\FieldableEntityInterface;
+use \Drupal\Core\Field\FieldDefinitionInterface;
+
+/**
+ * Default value callback for category fields.
+ */
+function media_pinkeye_category_default_value(FieldableEntityInterface $entity, FieldDefinitionInterface $definition) {
+  $map = \Drupal::config('media_pinkeye.settings')->get('category_map');
+  if (!empty($map[$entity->bundle()])) {
+    return ['target_id' => \Drupal::state()->get('media_pinkeye_tid_' . $map[$entity->bundle()])];
+  }
+
+  return [];
+}

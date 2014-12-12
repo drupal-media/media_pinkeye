@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Install, uninstall and update hooks for Media Pinkeye.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function media_pinkeye_install() {
+  foreach ([t('Images'), t('Tweets')] as $term_name) {
+    /** @var \Drupal\taxonomy\TermInterface $term */
+    $term = \Drupal::entityManager()->getStorage('taxonomy_term')->create([
+      'name' => $term_name,
+      'vid' => 'media',
+    ]);
+    $term->save();
+
+    \Drupal::state()
+      ->set('media_pinkeye_tid_' . strtolower($term_name), $term->id());
+  }
+}
