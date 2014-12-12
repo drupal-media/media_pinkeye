@@ -1,0 +1,14 @@
+langcode: und
+status: true
+dependencies:
+  module:
+    - media_entity_twitter
+id: tweet
+label: Tweet
+description: 'Represents a tweet.'
+type: twitter
+third_party_settings: {  }
+type_configuration:
+  source_field: tweet
+  use_twitter_api: 0
+field_map: {  }

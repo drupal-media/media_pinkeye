@@ -1,0 +1,32 @@
+langcode: und
+status: true
+dependencies:
+  config:
+    - field.field.media.tweet.tweet
+    - media_entity.bundle.tweet
+id: media.tweet.default
+targetEntityType: media
+bundle: tweet
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  tweet:
+    type: string_textarea
+    weight: 1
+    settings:
+      rows: 3
+      placeholder: 'Paste tweet''s URL or embed code.'
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
+third_party_settings: {  }

@@ -1,0 +1,19 @@
+langcode: und
+status: true
+dependencies:
+  config:
+    - field.storage.media.instagram
+    - media_entity.bundle.instagram
+id: media.instagram.instagram
+field_name: instagram
+entity_type: media
+bundle: instagram
+label: Instagram post
+description: 'Paste media post URL or embed code.'
+required: true
+translatable: false
+default_value: { }
+default_value_callback: ''
+settings: {  }
+third_party_settings: {  }
+field_type: string_long
