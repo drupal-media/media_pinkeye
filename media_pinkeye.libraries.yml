@@ -1,0 +1,5 @@
+library:
+  version: VERSION
+  css:
+    base:
+      css/library.css: {}
