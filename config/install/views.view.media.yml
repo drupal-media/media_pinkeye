@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - media_entity
+    - media_pinkeye
     - taxonomy
     - user
 id: media
@@ -67,7 +67,7 @@ display:
             last: 'last »'
           quantity: 9
       style:
-        type: media_entity_library
+        type: media_pinkeye_library
         options:
           row_class: ''
           default_row_class: true
