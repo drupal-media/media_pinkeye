@@ -31,4 +31,5 @@ hidden:
   image: true
   uid: true
   created: true
+  category: true
 third_party_settings: {  }

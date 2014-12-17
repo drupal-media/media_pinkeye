@@ -2,7 +2,8 @@ langcode: en
 status: true
 dependencies:
   module:
-    - media_entity
+    - media_pinkeye
+    - taxonomy
     - user
 id: media
 label: Media
@@ -66,7 +67,7 @@ display:
             last: 'last »'
           quantity: 9
       style:
-        type: media_entity_library
+        type: media_pinkeye_library
         options:
           row_class: ''
           default_row_class: true
@@ -522,29 +523,31 @@ display:
           plugin_id: dropbutton
           provider: views
       filters:
-        bundle:
-          id: bundle
-          table: media_field_data
-          field: bundle
+        category_target_id:
+          id: category_target_id
+          table: media__category
+          field: category_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
+          operator: or
           value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: bundle_op
-            label: Bundle
+            operator_id: category_target_id_op
+            label: 'Media category'
             description: ''
             use_operator: false
-            operator: bundle_op
-            identifier: bundle
+            operator: category_target_id_op
+            identifier: category_target_id
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -558,8 +561,13 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: bundle
-          provider: views
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: media
+          hierarchy: true
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts: {  }
       title: Media
       header: {  }
@@ -584,6 +592,11 @@ display:
       arguments: {  }
       field_langcode: '***CURRENT_LANGUAGE***'
       field_langcode_add_to_query: null
+      display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
   page_1:
     display_plugin: page
     id: page_1
@@ -607,6 +620,7 @@ display:
       field_langcode: '***CURRENT_LANGUAGE***'
       field_langcode_add_to_query: null
       display_description: ''
+      display_extenders: {  }
   page_2:
     display_plugin: page
     id: page_2
@@ -663,3 +677,4 @@ display:
         weight: 2
         context: '1'
         menu_name: account
+      display_extenders: {  }

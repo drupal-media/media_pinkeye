@@ -23,9 +23,14 @@ content:
       rows: 3
       placeholder: 'Paste Instagram post URL or embed code.'
     third_party_settings: {  }
+  category:
+    type: options_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
 hidden: {  }
