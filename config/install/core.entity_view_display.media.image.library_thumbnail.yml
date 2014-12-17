@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.library_thumbnail
-    - field.field.media.image.field_image
+    - field.field.media.image.image
     - media_entity.bundle.image
   module:
     - image
