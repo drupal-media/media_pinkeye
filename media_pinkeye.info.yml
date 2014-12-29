@@ -8,4 +8,6 @@ dependencies:
   - media_entity_image
   - media_entity_twitter
   - media_entity_instagram
+  - media_entity_slideshow
+  - entity_reference
   - views

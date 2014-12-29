@@ -1,0 +1,19 @@
+langcode: und
+status: true
+dependencies:
+  module:
+    - entity_reference
+    - media_entity
+id: media.slideshow_items
+field_name: slideshow_items
+entity_type: media
+type: entity_reference
+settings:
+  target_type: media
+module: entity_reference
+locked: false
+cardinality: -1
+translatable: true
+indexes:
+  target_id:
+    - target_id
