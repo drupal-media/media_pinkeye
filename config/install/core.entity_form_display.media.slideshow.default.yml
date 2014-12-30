@@ -1,0 +1,39 @@
+langcode: und
+status: true
+dependencies:
+  config:
+    - field.field.media.slideshow.slideshow_items
+    - media_entity.bundle.slideshow
+id: media.slideshow.default
+targetEntityType: media
+bundle: slideshow
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  slideshow_items:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      autocomplete_type: tags
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  category:
+    type: options_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
+third_party_settings: {  }
