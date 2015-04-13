@@ -2,7 +2,7 @@ langcode: und
 status: true
 dependencies:
   config:
-    - field.field.media.instgram.instagram
+    - field.field.media.instagram.instagram
     - media_entity.bundle.instagram
 id: media.instagram.default
 targetEntityType: media
