@@ -12,8 +12,7 @@ label: Tweet
 description: 'Paste tweet''s URL or embed code.'
 required: true
 translatable: false
-default_value: { }
+default_value: {  }
 default_value_callback: ''
 settings: {  }
-third_party_settings: {  }
 field_type: string_long

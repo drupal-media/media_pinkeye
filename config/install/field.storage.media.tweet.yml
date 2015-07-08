@@ -7,7 +7,8 @@ id: media.tweet
 field_name: tweet
 entity_type: media
 type: string_long
-settings: {  }
+settings:
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

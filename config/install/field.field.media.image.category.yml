@@ -1,17 +1,27 @@
-id: media.image.category
-entity_type: media
-bundle: image
-field_name: category
-field_type: taxonomy_term_reference
-label: Category
-description: 'Select category media belongs to.'
-required: true
-default_value: {  }
-default_value_callback: 'media_pinkeye_category_default_value'
-settings: {  }
-status: true
 langcode: und
+status: true
 dependencies:
   config:
     - field.storage.media.category
     - media_entity.bundle.image
+  module:
+    - entity_reference
+id: media.image.category
+field_name: category
+entity_type: media
+bundle: image
+label: Category
+description: 'Select category media belongs to.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: media_pinkeye_category_default_value
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      media: media
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

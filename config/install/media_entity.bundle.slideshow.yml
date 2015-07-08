@@ -7,7 +7,6 @@ id: slideshow
 label: Slideshow
 description: 'Slideshows of media items.'
 type: slideshow
-third_party_settings: {  }
 type_configuration:
   source_field: slideshow_items
 field_map: {  }

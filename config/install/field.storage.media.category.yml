@@ -1,23 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+    - taxonomy
 id: media.category
 field_name: category
 entity_type: media
-type: taxonomy_term_reference
-module: taxonomy
+type: entity_reference
 settings:
-  allowed_values:
-    -
-      vocabulary: media
-      parent: 0
+  target_type: taxonomy_term
+module: entity_reference
 locked: false
 cardinality: -1
 translatable: true
 indexes:
   target_id:
     - target_id
-status: true
-langcode: en
-dependencies:
-  module:
-    - media_entity
-    - taxonomy
 persist_with_no_fields: false

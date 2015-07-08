@@ -1,7 +1,8 @@
+langcode: und
+status: true
+dependencies: {  }
+name: 'Media categorization'
 vid: media
-name: Media categorization
 description: 'Categorization of site-wide media.'
 hierarchy: 1
 weight: 0
-status: true
-langcode: und

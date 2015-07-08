@@ -17,3 +17,4 @@ translatable: true
 indexes:
   target_id:
     - target_id
+persist_with_no_fields: false

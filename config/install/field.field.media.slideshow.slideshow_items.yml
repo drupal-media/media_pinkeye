@@ -15,7 +15,7 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: default
+  handler: 'default:media'
   handler_settings:
     target_bundles:
       image: image
@@ -23,5 +23,4 @@ settings:
       tweet: tweet
     sort:
       field: _none
-third_party_settings: {  }
 field_type: entity_reference

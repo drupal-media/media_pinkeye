@@ -33,5 +33,5 @@ settings:
     width: null
     height: null
   handler: default
-third_party_settings: {  }
+  handler_settings: {  }
 field_type: image

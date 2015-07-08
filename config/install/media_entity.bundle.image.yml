@@ -7,7 +7,6 @@ id: image
 label: Image
 description: 'Locally hosted images.'
 type: image
-third_party_settings: {  }
 type_configuration:
   source_field: image
   gather_exif: '0'

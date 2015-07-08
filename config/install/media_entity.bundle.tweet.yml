@@ -7,7 +7,6 @@ id: tweet
 label: Tweet
 description: 'Represents a tweet.'
 type: twitter
-third_party_settings: {  }
 type_configuration:
   source_field: tweet
   use_twitter_api: 0
