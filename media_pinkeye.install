@@ -9,7 +9,7 @@
  * Implements hook_install().
  */
 function media_pinkeye_install() {
-  foreach ([t('Images'), t('Tweets')] as $term_name) {
+  foreach ([t('Images'), t('Tweets'), t('Slideshows')] as $term_name) {
     /** @var \Drupal\taxonomy\TermInterface $term */
     $term = \Drupal::entityManager()->getStorage('taxonomy_term')->create([
       'name' => $term_name,
