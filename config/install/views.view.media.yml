@@ -10,7 +10,7 @@ label: Media
 module: views
 description: 'Find and manage media.'
 tag: ''
-base_table: media
+base_table: media_field_data
 base_field: mid
 core: 8.x
 display:
